@@ -1,4 +1,4 @@
-name: iOS Build Check
+name: iOS IPA Build
 
 on:
   workflow_dispatch:
@@ -8,6 +8,7 @@ on:
 jobs:
   build:
     runs-on: macos-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -15,7 +16,7 @@ jobs:
       - name: Show Xcode version
         run: xcodebuild -version
 
-      - name: Build unsigned iOS app
+      - name: Build iOS App
         run: |
           xcodebuild \
             -project SIFUExternal.xcodeproj \
@@ -25,3 +26,22 @@ jobs:
             -derivedDataPath build/DerivedData \
             CODE_SIGNING_ALLOWED=NO \
             build
+
+      - name: Package unsigned IPA
+        run: |
+          APP_PATH=$(find build/DerivedData/Build/Products/Release-iphoneos \
+            -name "SIFUExternal.app" -type d -print -quit)
+
+          test -n "$APP_PATH" || exit 1
+
+          mkdir -p build/Payload
+          cp -R "$APP_PATH" build/Payload/
+          cd build
+          zip -r SIFUExternal-unsigned.ipa Payload
+
+      - name: Upload IPA Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: SIFU-EXTERNAL-IPA
+          path: build/SIFUExternal-unsigned.ipa
+          if-no-files-found: error
