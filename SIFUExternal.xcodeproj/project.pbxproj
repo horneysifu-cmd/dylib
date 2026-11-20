@@ -1,0 +1,29 @@
+// !$*UTF8*$!
+{
+  archiveVersion = 1;
+  classes = {};
+  objectVersion = 56;
+  objects = {
+    A10000000000000000000001 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+    A10000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+    A10000000000000000000003 /* SIFUExternal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SIFUExternal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+    A10000000000000000000004 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+    A10000000000000000000005 /* SIFUExternal */ = {isa = PBXGroup; children = (A10000000000000000000001, A10000000000000000000002, A10000000000000000000004,); path = SIFUExternal; sourceTree = "<group>"; };
+    A10000000000000000000006 /* Products */ = {isa = PBXGroup; children = (A10000000000000000000003,); name = Products; sourceTree = "<group>"; };
+    A10000000000000000000007 /* mainGroup */ = {isa = PBXGroup; children = (A10000000000000000000005, A10000000000000000000006,); sourceTree = "<group>"; };
+    A10000000000000000000008 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A10000000000000000000009, A1000000000000000000000A,); runOnlyForDeploymentPostprocessing = 0; };
+    A10000000000000000000009 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000001; };
+    A1000000000000000000000A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10000000000000000000002; };
+    A1000000000000000000000B /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+    A1000000000000000000000C /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0; };
+    A1000000000000000000000D /* Native target */ = {isa = PBXNativeTarget; buildConfigurationList = A10000000000000000000010; buildPhases = (A10000000000000000000008, A1000000000000000000000B, A1000000000000000000000C,); buildRules = (); dependencies = (); name = SIFUExternal; productName = SIFUExternal; productReference = A10000000000000000000003; productType = "com.apple.product-type.application"; };
+    A1000000000000000000000E /* Project */ = {isa = PBXProject; attributes = { LastUpgradeCheck = 1600; }; buildConfigurationList = A10000000000000000000011; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base,); mainGroup = A10000000000000000000007; productRefGroup = A10000000000000000000006; projectDirPath = ""; projectRoot = ""; targets = (A1000000000000000000000D,); };
+    A10000000000000000000012 /* Debug project config */ = {isa = XCBuildConfiguration; buildSettings = { IPHONEOS_DEPLOYMENT_TARGET = 15.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Debug; };
+    A10000000000000000000013 /* Release project config */ = {isa = XCBuildConfiguration; buildSettings = { IPHONEOS_DEPLOYMENT_TARGET = 15.0; SDKROOT = iphoneos; SWIFT_VERSION = 5.0; }; name = Release; };
+    A10000000000000000000014 /* Debug target config */ = {isa = XCBuildConfiguration; buildSettings = { PRODUCT_BUNDLE_IDENTIFIER = com.sifu.external; PRODUCT_NAME = "$(TARGET_NAME)"; INFOPLIST_KEY_CFBundleDisplayName = "SIFU EXTERNAL"; GENERATE_INFOPLIST_FILE = YES; TARGETED_DEVICE_FAMILY = "1,2"; SWIFT_EMIT_LOC_STRINGS = YES; }; name = Debug; };
+    A10000000000000000000015 /* Release target config */ = {isa = XCBuildConfiguration; buildSettings = { PRODUCT_BUNDLE_IDENTIFIER = com.sifu.external; PRODUCT_NAME = "$(TARGET_NAME)"; INFOPLIST_KEY_CFBundleDisplayName = "SIFU EXTERNAL"; GENERATE_INFOPLIST_FILE = YES; TARGETED_DEVICE_FAMILY = "1,2"; SWIFT_EMIT_LOC_STRINGS = YES; }; name = Release; };
+    A10000000000000000000010 /* Target config list */ = {isa = XCConfigurationList; buildConfigurations = (A10000000000000000000014, A10000000000000000000015,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+    A10000000000000000000011 /* Project config list */ = {isa = XCConfigurationList; buildConfigurations = (A10000000000000000000012, A10000000000000000000013,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release; };
+  };
+  rootObject = A1000000000000000000000E;
+}
